@@ -1,0 +1,71 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  height: 82vh;
+  width: 60vw;
+  padding: 0.5cm;
+  margin: 15vh auto 0;
+}
+
+.form-group.search-tab {
+  right: 50%;
+  top: 17%;
+  background: white;
+  text-align: center;
+  border: white;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+.card.place {
+  text-align: center;
+  width: 12rem;
+  background: transparent;
+  right: 35%;
+  display: block;
+  margin: 0 auto;
+}
+.card-title {
+  font-size: 29px;
+  font-weight: bold;
+}
+.status {
+  text-align: right;
+  width: 9rem;
+  background: transparent;
+  float: right;
+  display: block;
+  margin: 0 auto;
+}
+.temperature {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(43, 137, 226);
+}
+.emoji-now,
+.nowTemp {
+  font-size: 90px;
+}
+.degree {
+  font-size: 30px;
+}
+
+.col-sm {
+  width: 30px;
+  height: 73px;
+  border: 1px solid gray;
+  border-radius: 25px;
+  text-align: center;
+}
+.daily-status {
+  font-size: 12px;
+}
+.coder {
+  text-align: right;
+  color: rgb(104, 100, 100);
+  font-size: 10px;
+}
