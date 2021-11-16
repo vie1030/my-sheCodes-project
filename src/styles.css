@@ -1,6 +1,32 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 20px;
+  color: #777167;
+}
+
+li .first-letter {
+  text-transform: capitalize;
+}
+
 .container {
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   height: 82vh;
@@ -9,7 +35,7 @@ body {
   margin: 15vh auto 0;
 }
 
-.form-group.search-tab {
+.searchTab {
   right: 50%;
   top: 17%;
   background: white;
@@ -17,43 +43,35 @@ body {
   border: white;
 }
 
-button {
-  display: block;
-  margin: 0 auto;
+.view-cityDate {
+  position: relative;
+  font-size: 16px;
+  top: 10px;
+  margin-left: 20px;
 }
-.card.place {
-  text-align: center;
-  width: 12rem;
-  background: transparent;
-  right: 35%;
-  display: block;
-  margin: 0 auto;
-}
-.card-title {
-  font-size: 29px;
+.city {
+  font-size: 35px;
   font-weight: bold;
 }
-.status {
-  text-align: right;
-  width: 9rem;
-  background: transparent;
-  float: right;
-  display: block;
-  margin: 0 auto;
+.weather-temperature img {
+  margin-top: 5px;
+  margin-right: -15px;
+  margin-left: 100px;
+  height: 150px;
+  width: 150px;
 }
-.temperature {
-  text-align: center;
-  font-weight: bold;
-  color: rgb(43, 137, 226);
+.weather-temperature strong {
+  color: #2e2823;
+  font-size: 84px;
+  font-weight: 400;
+  line-height: 64px;
+  margin-bottom: -50px;
 }
-.emoji-now,
-.nowTemp {
-  font-size: 90px;
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
 }
-.degree {
-  font-size: 30px;
-}
-
 .col-sm {
   width: 30px;
   height: 73px;
@@ -61,7 +79,7 @@ button {
   border-radius: 25px;
   text-align: center;
 }
-.daily-status {
+.daily-weatherStatus {
   font-size: 12px;
 }
 .coder {

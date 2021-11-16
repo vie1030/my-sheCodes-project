@@ -23,57 +23,64 @@
     <div class="container">
       <form id="searchForm">
         <div class="row">
-          <div class="col-6">
+          <div class="col-8">
             <div class="form-group search-tab">
               <input
                 type="text"
                 class="form-control"
-                placeholder="🔍Search weather by City"
+                placeholder="Type a city here"
                 id="searchTab"
                 autocomplete="off"
                 autofocus="on"
               />
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-1">
             <div class="button">
-              <input type="submit" class="btn btn-primary" value="Search" />
+              <input type="submit" class="btn btn-primary" value="🔍" />
             </div>
           </div>
 
-          <div class="col-4">
+          <div class="col-3">
             <button class="btn btn-success w-100" id="current-location-button">
-              Current Location
+              📍 Location
             </button>
           </div>
         </div>
       </form>
 
       <br />
-      <div class="card place">
-        <div class="card-body">
-          <h3 class="card-title" id="city">📍</h3>
-          <div class="card-text" id="current-time"></div>
-        </div>
+      <div class="view-cityDate">
+        <h3 id="city"></h3>
+        <div id="current-date"></div>
+        <div id="current-time"></div>
       </div>
 
-      <div class="card status">
-        <div class="card-body">
-          <h5 class="card-title" id="decription">Clear</h5>
-          <div class="card-text"><span id="highLowTemperature"></span></div>
-          <div class="card-text">Feels like <span id="feelLike"></span>°C</div>
+      <div class="row">
+        <div class="col-9">
+          <div class="clearfix weather-temperature">
+            <img src="" alt="Clear" id="icon" class="float-left" />
+            <span>
+              <strong id="temperature"></strong>
+              <span class="units">
+                <a href="#" id="celsius-link" class="active">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a></span
+              >
+            </span>
+          </div>
         </div>
-      </div>
 
-      <div class="clearfix weather-temperature">
-        <img src="" alt="Clear" id="icon" class="float-left" />
-        <span class="float-left">
-          <strong id="temperature"></strong>
-          <span class="units">
-            <a href="#" id="celsius-link" class="active">°C</a> |
-            <a href="#" id="fahrenheit-link">°F</a></span
-          >
-        </span>
+        <div class="col-3">
+          <div class="weatherView">
+            <ul>
+              <li class="card-title"><span id="decription"></span></li>
+              <li class="card-text"><span id="highLowTemperature"></span></li>
+              <li class="card-text">
+                Feels like <span id="feelLike"></span>°C
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <br />
@@ -105,7 +112,7 @@
         </div>
       </div>
       <hr />
-      <div class="daily-status">
+      <div class="daily-weatherStatus">
         <table class="table table-sm table-borderless">
           <tbody>
             <tr>
