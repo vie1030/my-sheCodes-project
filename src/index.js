@@ -49,10 +49,10 @@ let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", handleSubmit);
 
 function showTemperature(response) {
-  document.querySelector("#currentValue").innerHTML = Math.round(
+  document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#atmosphere").innerHTML =
+  document.querySelector("#decription").innerHTML =
     response.data.weather[0].description;
 
   let high = Math.round(response.data.main.temp_max);
@@ -70,6 +70,13 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   document.querySelector("#city").innerHTML = response.data.name;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showPosition(position) {
