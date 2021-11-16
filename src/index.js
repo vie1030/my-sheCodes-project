@@ -52,6 +52,7 @@ function showTemperature(response) {
   document.querySelector(
     "#highLowTemperature"
   ).innerHTML = `${high}°C/${low}°C`;
+
   document.querySelector("#feelLike").innerHTML = Math.round(
     response.data.main.feels_like
   );

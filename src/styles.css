@@ -21,15 +21,12 @@ li {
   font-size: 16px;
   font-weight: 100;
   line-height: 20px;
-}
-
-li .first-letter {
   text-transform: capitalize;
 }
 
 .container {
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  height: 82vh;
+  height: 70vh;
   width: 60vw;
   padding: 0.5cm;
   margin: 15vh auto 0;
@@ -51,7 +48,6 @@ li .first-letter {
 }
 
 .weather-temperature img {
-  margin-top: 5px;
   margin-right: -15px;
   margin-left: 140px;
   height: 150px;
@@ -62,7 +58,6 @@ li .first-letter {
   font-size: 84px;
   font-weight: 400;
   line-height: 64px;
-  margin-bottom: -50px;
 }
 .weather-temperature .units {
   position: relative;
