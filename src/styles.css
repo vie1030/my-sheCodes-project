@@ -42,15 +42,18 @@ li {
 
 .view-cityDate {
   position: relative;
-  top: 10px;
+  top: 8px;
   margin-left: 30px;
   color: #2e2823;
+  margin-bottom: 30px;
 }
 
 .weather-temperature img {
-  margin-right: -15px;
-  height: 150px;
-  width: 150px;
+  margin-top: -20px;
+  margin-right: 5px;
+  margin-left: 60px;
+  height: 99px;
+  width: 99px;
 }
 .weather-temperature strong {
   color: #2e2823;
