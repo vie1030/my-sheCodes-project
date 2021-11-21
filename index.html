@@ -43,7 +43,7 @@
 
           <div class="col-3">
             <button class="btn btn-success w-100" id="current-location-button">
-              📍 Location
+              Location
             </button>
           </div>
         </div>
@@ -51,7 +51,7 @@
 
       <br />
       <div class="view-cityDate">
-        <h2><strong id="city"></strong></h2>
+        <h2>📍 <strong id="city"></strong></h2>
         <div id="current-date"></div>
         <div id="current-time"></div>
       </div>
@@ -74,7 +74,7 @@
           <div class="weatherView">
             <ul>
               <li class="card-title"><span id="decription"></span></li>
-              <li class="card-text"><span id="highLowTemperature"></span></li>
+              <li class="card-text">🌡<span id="highLowTemperature"></span></li>
               <li class="card-text">
                 Feels like <span id="feelLike"></span>°C
               </li>
@@ -84,24 +84,19 @@
       </div>
 
       <br />
-      <div class="row">
-        <div class="col-sm">
-          <div class="day">Today</div>
-          <div>🌞</div>
-          <div class="temp">18°/3°</div>
-        </div>
-      </div>
+      <div class="weather-forecast" id="forecast"></div>
+
       <hr />
       <div class="daily-weatherStatus">
         <table class="table table-sm table-borderless">
           <tbody>
             <tr>
-              <td>Sunrise: <span id="sunShine"></span> AM</td>
-              <td>Wind: <span id="wind"></span> km/h</td>
+              <td>🌅 Sunrise: <span id="sunShine"></span> AM</td>
+              <td>🌬 Wind: <span id="wind"></span> km/h</td>
             </tr>
             <tr>
-              <td>Sunset: <span id="sunDown"></span> PM</td>
-              <td>Humidity: <span id="humid"></span>%</td>
+              <td>🌄 Sunset: <span id="sunDown"></span> PM</td>
+              <td>💧 Humidity: <span id="humid"></span>%</td>
             </tr>
           </tbody>
         </table>
