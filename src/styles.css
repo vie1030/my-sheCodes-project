@@ -68,7 +68,7 @@ li {
 }
 
 .weather-temperature .active {
-  color: #2e2823;
+  color: #5a554d;
   cursor: default;
   text-decoration: none;
 }
@@ -95,6 +95,7 @@ li {
 
 .daily-weatherStatus {
   font-size: 12px;
+  color: #5a554d;
 }
 .coder {
   text-align: right;

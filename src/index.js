@@ -38,7 +38,7 @@ function formatTime(timestamp) {
 function formatDailyForecast(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }
@@ -98,11 +98,9 @@ function showTemperature(response) {
   document.querySelector("#decription").innerHTML =
     response.data.weather[0].description;
 
-  let high = Math.round(response.data.main.temp_max);
-  let low = Math.round(response.data.main.temp_min);
-  document.querySelector(
-    "#highLowTemperature"
-  ).innerHTML = `${high}°C/${low}°C`;
+  document.querySelector("#highLowTemperature").innerHTML = `${Math.round(
+    response.data.main.temp_max
+  )}°C/${response.data.main.temp_min}°C`;
 
   document.querySelector("#feelLike").innerHTML = Math.round(
     response.data.main.feels_like
@@ -156,31 +154,6 @@ function showPosition(position) {
 function currentPossition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusElement.classList.remove("active");
-  fahrenheitElement.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusElement.classList.add("active");
-  fahrenheitElement.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitElement = document.querySelector("#fahrenheit-link");
-fahrenheitElement.addEventListener("click", showFahrenheitTemperature);
-
-let celsiusElement = document.querySelector("#celsius-link");
-celsiusElement.addEventListener("click", showCelsiusTemperature);
 
 let currentLocationBnt = document.querySelector("#current-location-button");
 currentLocationBnt.addEventListener("click", currentPossition);
